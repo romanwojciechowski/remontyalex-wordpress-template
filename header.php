@@ -7,6 +7,7 @@
         <?php wp_head(); ?>
         <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/dist/css/style.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     </head>
     <body <?php body_class(); ?>>
     <header class="header">

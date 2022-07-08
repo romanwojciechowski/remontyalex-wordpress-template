@@ -1,13 +1,16 @@
 .hero
-    padding: 160px 20%
+    position: relative
 
-    background-size: cover
-    background-position: 50%
-    background-repeat: no-repeat
+
+
+    transition: .3s
+    &-container
+        padding: 160px 20%
     & > .flex
         flex-direction: column
         align-items: flex-start
     &__heading
+        z-index: 20
         &--title
             background-color: #200c0e
 
