@@ -1,24 +1,41 @@
 .hero
     position: relative
-
-
-
+    z-index: 1
+    
     transition: .3s
     &-container
-        padding: 160px 20%
+        padding: 200px 3ex
     & > .flex
         flex-direction: column
         align-items: flex-start
     &__heading
         z-index: 20
         &--title
-            background-color: #200c0e
+            background-color: #fff
 
-            margin-bottom: 20px
-            padding: 10px
-            max-width: 260px
+            margin-bottom: 25px
+            padding: 11px 35px
+            max-width: 480px
+            border-radius: 5px
             
-            font-size: 24px
-            color: #fff
+            font-size: 43px
+            color: #03045E
+            font-family: 'Ubuntu', sans-serif
 
-            +medium
+            +bold
+    & > .btn
+        font-size: 18px
+@media only screen and (max-width: 830px)
+    .hero
+        min-height: calc(100vh - 84px)
+        &__heading
+            &--title
+                max-width: 270px
+                padding: 11px 20px
+                margin-bottom: 18px
+
+                font-size: 24px
+@media only screen and (max-width: 500px)
+    .hero
+        & > .flex
+            align-items: center

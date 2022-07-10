@@ -7,12 +7,11 @@
 
     padding: 2ex 1ex
     width: 100%
-
+    height: 84px
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25)
     & > .flex
         justify-content: space-between
     &-logo
-        padding: 0 1ex
         a
             img
                 width: 100%
@@ -20,5 +19,101 @@
                 max-width: 130px
 .menu
     display: flex
+    align-items: center
     &-item
-        margin: 0.5rem
+        margin-right: 40px
+        +medium
+        &:last-child
+            margin-right: 0
+    & > .btn
+        background: #03045E
+        +bold
+        font-size: 18px
+        a
+            color: #fff
+            &:hover 
+                text-decoration: none
+.menu-mobilne-container
+    display: none
+
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 500
+
+    width: 100%
+    height: 100%
+    .responsive-navigation
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+        z-index: 500
+
+        position: fixed
+        top: 0
+        right: -100%
+        
+        height: 100%
+        width: 100%
+
+        visibility: hidden
+        background-color: #fff
+        overflow: auto
+        transition: all .3s
+        &:last-child
+            margin-bottom: 0
+        & > .menu-item
+            margin-bottom: 1.25rem
+            & > a
+                font-size: 1.6rem
+                line-height: 1.75rem
+                letter-spacing: 0.13rem
+        & > .menu-item-has-children 
+            .sub-menu 
+                font-size: 1.3rem
+                
+.hamburger
+    display: none
+    position: relative
+    
+    z-index: 999
+    .bar
+        display: block
+
+        width: 1.56rem
+        height: 3px
+
+        margin: 5px auto
+
+        transition: all 0.3s ease-in-out
+        background-color: #000
+@media only screen and (max-width: 900px)
+    .header
+        padding: 2.5ex 1ex
+    .hamburger 
+        display: block
+        cursor: pointer
+        &.active 
+            & > .bar:nth-child(2)
+                opacity: 0
+        &.active 
+            & > .bar:nth-child(1)
+                transform: translateY(8px) rotate(45deg)
+        &.active 
+            & > .bar:nth-child(3) 
+                transform: translateY(-8px) rotate(-45deg)
+    .menu
+        display: none
+    .menu-item
+        margin-right: 0
+    .menu-mobilne-container 
+        display: block
+    .responsive-navigation
+        visibility: visible
+    .active
+        & > .responsive-navigation
+            visibility: visible
+            right: 0
+        

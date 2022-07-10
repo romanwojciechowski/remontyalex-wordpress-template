@@ -19,6 +19,7 @@ function register_my_menus() {
     register_nav_menus(
       array(
         'header-menu' => __( 'Główne' ),
+        'res-navigation' => __( 'Mobilne'),
         'footer-menu' => __( 'Stopka' )
        )
      );
@@ -28,6 +29,44 @@ add_action( 'init', 'register_my_menus' );
 // svg
 function svg($svg){
   echo file_get_contents( get_stylesheet_directory_uri() . '/assets/img/' . $svg );
+}
+
+// Add options page
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+
+function alt($field, $option = null)
+{
+    $image = get_field($field);
+    if (!$image)
+    {
+        $image = get_sub_field($field);
+    }
+
+    if ($option == 'option')
+    {
+        $image = get_field($field, 'option');
+    }
+    
+    $alt = $image['alt'];
+    echo $alt;
+}
+
+function image($field, $option = null)
+{
+    $image = get_field($field);
+    if (!$image)
+    {
+        $image = get_sub_field($field);
+    }
+
+    if ($option == 'option')
+    {
+        $image = get_field($field, 'option');
+    }
+    
+    echo $image['url'];
 }
 
 // Cleaning
