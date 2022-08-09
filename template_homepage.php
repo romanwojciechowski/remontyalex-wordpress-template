@@ -25,10 +25,10 @@ get_header();
     </div>
 </section>
 
-<section class="about" id="about">
+<section class="about section" id="about">
     <div class="container flex">
-        <h1 class="about-heading" data-aos="fade-right"><?php the_field('about-heading') ?></h1>
-        <ol class="about-gradient-list">
+        <h1 class="section-heading" data-aos="fade-right"><?php the_field('about-heading') ?></h1>
+        <ol class="section-gradient-list">
             <?php if( have_rows('about-list') ): ?>
                 <?php while( have_rows('about-list') ): the_row(); ?>
                     <li data-aos="fade-right"><?php the_sub_field('about-list-item') ?></li>
@@ -38,6 +38,30 @@ get_header();
     </div>
 </section>
 
+<section class="offer section" id="offer">
+    <div class="container flex">
+        <h1 class="section-heading" data-aos="fade-left"><?php the_field('offer-heading') ?></h1>
+        <ol class="section-gradient-list">
+            <?php if( have_rows('offer-list') ): ?>
+                <?php while( have_rows('offer-list') ): the_row(); ?>
+                    <li data-aos="fade-left"><?php the_sub_field('offer-list-item') ?></li>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </ol>
+    </div>
+</section>
+
+<section class="our-work section" id="our-work">
+    <div class="container">
+        <h1 class="section-heading" data-aos="fade-right"><?php the_field('work-heading') ?></h1>
+        <ul class="our-work-grid">
+            <li class="small" data-aos="fade-right" style="background-image: url('<?php image('work-image-small-left') ?>');"></li>
+            <li class="large" data-aos="fade-right" style="background-image: url('<?php image('work-image-large-right') ?>');"></li>
+            <li class="large" data-aos="fade-right" style="background-image: url('<?php image('work-image-small-right') ?>');"></li>
+            <li class="small" data-aos="fade-right" style="background-image: url('<?php image('work-image-large-left') ?>');"></li>
+        </ul>
+    </div>
+</section>
 
 
 <?php get_footer(); ?>
