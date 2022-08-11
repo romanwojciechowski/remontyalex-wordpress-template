@@ -52,7 +52,7 @@ get_header();
 </section>
 
 <section class="our-work section" id="our-work">
-    <div class="container">
+    <div class="container flex">
         <h1 class="section-heading" data-aos="fade-right"><?php the_field('work-heading') ?></h1>
         <ul class="our-work-grid">
             <li class="small" data-aos="fade-right" style="background-image: url('<?php image('work-image-small-left') ?>');"></li>
@@ -60,6 +60,27 @@ get_header();
             <li class="large" data-aos="fade-right" style="background-image: url('<?php image('work-image-small-right') ?>');"></li>
             <li class="small" data-aos="fade-right" style="background-image: url('<?php image('work-image-large-left') ?>');"></li>
         </ul>
+        <a class="btn our-work-btn" href="<?= get_template_directory_uri() ?>/galeria"><?php the_field('work-btn') ?></a>
+    </div>
+</section>
+
+<section class="contact section" id="contact">
+    <div class="container flex">
+        <h1 class="section-heading" data-aos="fade-left"><?php the_field('contact-heading') ?></h1>
+        <div class="contact-forms">
+                <div class="contact-forms-left">
+                <?php the_field('contact-subheading') ?>
+                <p>
+                    <strong>Email: </strong> <a href="mailto:<?php the_field('contact-email') ?>"><?php the_field('contact-email') ?></a>
+                </p>
+                <p>
+                    <strong>nr. telefonu: </strong> <a href="tel:<?php the_field('contact-phone') ?>"><?php the_field('contact-phone') ?> </a><?php the_field('contact-days') ?>
+                </p>
+                </div>
+                <div class="contact-forms-form">
+                <?php echo do_shortcode( '[contact-form-7 id="91" title="Contact form 1"]' ); ?>
+                </div>
+        </div>
     </div>
 </section>
 

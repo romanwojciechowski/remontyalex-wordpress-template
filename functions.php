@@ -161,3 +161,5 @@ function compress($buffer)
 {
     return compressHTML($buffer);
 }
+
+define('FS_METHOD', 'direct'); // remove
