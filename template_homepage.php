@@ -68,6 +68,9 @@ get_header();
     <div class="container flex">
         <h1 class="section-heading" data-aos="fade-left"><?php the_field('contact-heading') ?></h1>
         <div class="contact-forms">
+        <div class="contact-forms-form">
+                <?php echo do_shortcode( '[contact-form-7 id="91" title="Contact form 1"]' ); ?>
+                </div>
                 <div class="contact-forms-left">
                 <?php the_field('contact-subheading') ?>
                 <p>
@@ -77,9 +80,7 @@ get_header();
                     <strong>nr. telefonu: </strong> <a href="tel:<?php the_field('contact-phone') ?>"><?php the_field('contact-phone') ?> </a><?php the_field('contact-days') ?>
                 </p>
                 </div>
-                <div class="contact-forms-form">
-                <?php echo do_shortcode( '[contact-form-7 id="91" title="Contact form 1"]' ); ?>
-                </div>
+
         </div>
     </div>
 </section>

@@ -1,9 +1,23 @@
 </main>
 <footer>
-footer
+  <div class="container flex">
+    <ul class="footer-list">
+      <li>
+        <strong>Email: </strong><a href="mailto:<?php the_field('footer-email') ?>"><?php the_field('footer-email') ?> </a>
+      </li>
+      <li>
+        <strong>Tel: </strong><a href="tel:<?php the_field('footer-phone') ?>"><?php the_field('footer-phone') ?> </a>
+      </li>
+      <li>
+        <strong>NIP: </strong><?php the_field('footer-nip') ?>
+      </li>
+      <li>
+        <strong>Regon: </strong><?php the_field('footer-regon') ?>
+      </li>
+    </ul>
+  </div>
 </footer>
 <?php wp_footer() ?>
-
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="<?= get_template_directory_uri() ?>/dist/js/main.js"></script>
