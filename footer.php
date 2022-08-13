@@ -1,5 +1,5 @@
 </main>
-<footer>
+<footer class="footer">
   <div class="container flex">
     <ul class="footer-list">
       <li>
@@ -15,6 +15,7 @@
         <strong>Regon: </strong><?php the_field('footer-regon') ?>
       </li>
     </ul>
+    <?php wp_nav_menu(['theme_location' => 'footer-menu', 'container' => false]); ?>
   </div>
 </footer>
 <?php wp_footer() ?>

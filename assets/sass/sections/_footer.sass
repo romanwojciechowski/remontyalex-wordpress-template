@@ -1,4 +1,4 @@
-footer
+.footer
     color: #fff
     background-color: rgb(32, 62, 87)
     padding: 2ex 0
@@ -7,3 +7,10 @@ footer
         justify-content: space-between
     a
         color: #fff
+    
+@media only screen and (max-width: 900px)
+    .footer
+        & > .flex
+            justify-content: center
+        &-list
+            text-align: center

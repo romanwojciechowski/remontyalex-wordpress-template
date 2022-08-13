@@ -12,7 +12,7 @@
     <body <?php body_class(); ?>>
     <header class="header">
         <div class="container flex">
-            <div class="header-logo"><a href="<?= get_template_directory_uri() ?>"><img src="<?php image('logo', 'option') ?>" alt="<?php alt('logo', 'option') ?>"></a></div>
+            <div class="header-logo"><a href="<?= get_site_url() ?>"><img src="<?php image('logo', 'option') ?>" alt="<?php alt('logo', 'option') ?>"></a></div>
             <?php wp_nav_menu(['theme_location' => 'header-menu', 'container' => false]); ?>
             <?php wp_nav_menu(['theme_location' => 'res-navigation', 'menu_class' => 'responsive-navigation'] ); ?>
             <div class="hamburger">
